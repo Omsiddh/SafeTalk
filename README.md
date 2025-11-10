@@ -51,7 +51,7 @@ npm run dev           # Starts on http://localhost:5173
 
 ## 🎯 Overview
 
-SafeTalk is a modern, secure messaging platform that prioritizes user privacy through end-to-end encryption. Built with the MERN stack and TypeScript, it combines the real-time capabilities of Socket.io with military-grade encryption to ensure your conversations remain truly private.
+SafeTalk is a modern, secure messaging platform that prioritizes user privacy through end-to-end encryption. Built with the MERN stack and TypeScript, it combines the real-time capabilities of Socket.io with encryption to ensure your conversations remain truly private.
 
 ### 📊 Project Status
 
@@ -73,7 +73,6 @@ SafeTalk is a modern, secure messaging platform that prioritizes user privacy th
 
 - **Zero-Knowledge Architecture**: Your messages are encrypted on your device before being sent
 - **No Plaintext Storage**: Server never has access to unencrypted messages
-- **Open Source**: Full transparency - audit the code yourself
 - **Modern Stack**: Built with the latest technologies and best practices
 - **Production Ready**: Comprehensive security measures and error handling
 
@@ -245,7 +244,7 @@ SafeTalk implements industry-standard security measures to ensure your conversat
    │   Server    │ → Stores encrypted data (no plaintext)
    └─────────────┘
          │
-         └─→ MongoDB: {ciphertext, iv, encryptedAesKey, metadata}
+         └─→ MongoDB: {ciphertext, iv, encryptedAesKey}
 
 4. MESSAGE DECRYPTION (Receiving)
    ┌─────────────┐
@@ -373,10 +372,6 @@ Open your browser and navigate to:
 ```
 http://localhost:5173
 ```
-
-### 🐳 Docker Setup (Optional)
-
-Coming soon! Docker Compose configuration for one-command setup.
 
 ---
 
